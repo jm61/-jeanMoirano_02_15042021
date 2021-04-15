@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@;300;400;500&display=swap');
+/* Variables */
+:root {
+ --blue:  #0065FC;
+ --primary: black;
+ --light:  #DEEBFF;
+ --bg-section: #F2F2F2;
+ --bg: white;
+}
+body {
+    font-family: 'Raleway',sans-serif ;
+    background-color: var(--bg);
+    color: var(--black);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header {
+  display:grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "logo . heb act reg";
+  margin: 0 2rem;
+}
+.logo {
+    grid-area: logo;
+}
+.heb {
+    grid-area: heb;
+    text-decoration: none;
+    margin: 0rem 1rem 0 1rem;
+    color: var(--blue);
+    font-weight: bold;
+    padding-top: 1.5rem;
+}
+.act {
+    grid-area: act;
+    text-decoration: none;
+    margin: 0rem 1rem 0 1rem;
+
+    color: var(--blue);
+    font-weight: bold;
+    padding-top: 1.5rem;
+}
+.reg {
+    grid-area: reg;
+    text-decoration: none;
+    margin: 0rem 1rem 0 1rem;
+
+    color: var(--blue);
+    font-weight: bold;
+    padding-top: 1.5rem;
+}
+.heb:hover, .act:hover {
+    border-top: solid 3px var(--blue);
+}
+/* Media Query Header */
+@media screen and (max-width: 532px){
+	header {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+            "logo reg"
+			" heb act";
+		margin: 1rem 0 0 0;
+    }
+    .heb:hover, .act:hover {
+        border-bottom: solid 3px var(--blue);
+        border-top: none;    
+    }
+    .heb, .act {
+        text-align: center; 
+    }
+    .reg {
+        text-align: right;
+    }
+    .logo {
+        margin-left: 1rem;
+    }
+    .searchBar .btn {
+        display: none;
+    }
+    .searchBar .btn2 {
+        height: 100%;
+        background-color: var(--blue);
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+    }    
+}	
+/* Search Section */
+.search {
+    margin-left: 1.9rem;
+   /* display: inline-block; */
+}
+.searchBar {
+    display: inline-flex;
+}
+.searchBar input {
+    border: none;
+    font-size: 1.1rem;
+}
+.search .title {
+    margin-top: 1.5rem;
+}
+#map-marker {
+    padding: 1rem;
+    border-radius: 50% 0 0 50%;
+    background-color: var(--light);
+}
+.btn {
+        height: 100%;
+        background-color: var(--blue);
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+}
+.search .btn:hover, .search .btn2:hover {
+    opacity: .6;
+}
+.btn2 {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+}
+

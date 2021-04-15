@@ -1,29 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel='icon' href='data:;base64,iVBORw0KGgo='>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/042eba6f6a.js" crossorigin="anonymous"></script>
     <title>P2 Reservia</title>
 </head>
 <body> 
-    <header class="header">
-        <div class="wrapper">
-            <img src="./images/logo/Reservia.svg"  class="header-logo" alr="logo"></img>
-            <nav class="header-navbar">
-                <a href="#" class="header-navbar__link">Hébergements</a>
-                <a href="#" class="header-navbar__link">Activités</a>
-                <a href="#" class="header-navbar__link">S'inscrire</a>
-            </nav>
-        </div>
+    <!-- Header and Nav Section -->
+    <header>
+                <img src="./images/logo/Reservia.svg"  class="logo" alt="logo"></img>
+                    <a href="#hébergements" class="heb">Hébergements</a>
+                    <a href="#activités" id="act" class="act">Activités</a>
+                    <a href="#" class="reg">S'inscrire</a>
     </header>
-    <main class="main">  
-        <section class="search">
+    <main class="main">
+    <!--  Search Section -->
+        <section>
+            <div class="search">
+                <h2 class="title">Trouvez votre hébergement pour des vacances de rêve</h2>
+            <p class="subtitle">En plein centre ville ou en pleine nature</p>
+            <div class="searchBar">
+                <i class="fa fa-map-marker" id="map-marker"></i>
+                <input type="search" name="search" placeholder="entrez un nom de ville...">
+                <button class="btn">Rechercher</i></button>
+                <button class="btn2"><i class="fa fa-search"></i></button>
+            </div>
+            </div>
+    <!-- Filters Section -->
+        <section>
+            <div class="filters">
+                <i class="fas fa-donate"></i>
+                <i class="fas fa-child"></i>
+                <i class="fas fa-dog"></i>
+                <i class="fas fa-heart"></i>
 
+            </div>
+        </section>
         </section>
         <section class="results">
             <article class="results-main"></article>

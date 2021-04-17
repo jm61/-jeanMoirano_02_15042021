@@ -1,59 +1,279 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel='icon' href='data:;base64,iVBORw0KGgo='>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/042eba6f6a.js" crossorigin="anonymous"></script>
-    <title>P2 Reservia</title>
-</head>
-<body> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reservia web site is the modern application for booking accomodations in an unbiased way"
+    />
+    <meta
+      name="keywords"
+      content="booking, mobile, accomodations, tourism, travel, hotels, b&b"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/042eba6f6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Reservia Booking</title>
+  </head>
+  <body>
     <!-- Header and Nav Section -->
     <header>
-                <img src="./images/logo/Reservia.svg"  class="logo" alt="logo"></img>
-                    <a href="#hébergements" class="heb">Hébergements</a>
-                    <a href="#activités" id="act" class="act">Activités</a>
-                    <a href="#" class="reg">S'inscrire</a>
+      <img src="./images/logo/Reservia.svg" class="logo" alt="logo" />
+      <a href="#hébergements" class="heb">Hébergements</a>
+      <a href="#activités" id="act" class="act">Activités</a>
+      <a href="#" class="reg">S'inscrire</a>
     </header>
     <main class="main">
-    <!--  Search Section -->
-        <section>
-            <div class="search">
-                <h2 class="title">Trouvez votre hébergement pour des vacances de rêve</h2>
-            <p class="subtitle">En plein centre ville ou en pleine nature</p>
-            <div class="searchBar">
-                <i class="fa fa-map-marker" id="map-marker"></i>
-                <input type="search" name="search" placeholder="entrez un nom de ville...">
-                <button class="btn">Rechercher</i></button>
-                <button class="btn2"><i class="fa fa-search"></i></button>
+      <!--  Search Section -->
+      <div class="search">
+        <h2 class="title">
+          Trouvez votre hébergement pour des vacances de rêve
+        </h2>
+        <p class="subtitle">En plein centre ville ou en pleine nature</p>
+        <div class="searchBar">
+          <i class="fa fa-map-marker" id="map-marker"></i>
+          <form method="POST" action="/">
+            <input
+              type="search"
+              name="search"
+              placeholder="entrez un nom de ville..."
+            />
+            <button type="button" class="btn">Rechercher</button>
+            <button type="button" class="btn2">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Filters Section -->
+      <section>
+        <div class="filters">
+          <h3>Filtres</h3>
+          <div class="filter">
+            <label>
+              <i class="fas fa-donate fa-lg"></i>
+              <input type="checkbox" id="eco" />Economique</label
+            >
+          </div>
+          <div class="filter">
+            <label>
+              <i class="fas fa-child fa-lg"></i>
+              <input type="checkbox" />Familial</label
+            >
+          </div>
+          <div class="filter">
+            <label>
+              <i class="fas fa-heart fa-lg"></i>
+              <input type="checkbox" />Romantique</label
+            >
+          </div>
+          <div class="filter">
+            <label>
+              <i class="fas fa-dog fa-lg"></i>
+              <input type="checkbox" />Animaux autorisés</label
+            >
+          </div>
+        </div>
+        <div class="info-results">
+          <i class="fas fa-info"></i>
+          <p>
+            Plus de <span>56 </span>logements sont disponibles dans cette ville
+          </p>
+        </div>
+      </section>
+      <!--  Section Results -->
+      <section>
+        <div class="results">
+          <div class="acc">
+            <h1>Hébergements à Marseille</h1>
+            <div class="cards">
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                    alt="Auberge la Cannebière"
+                  />
+                  <h3>Auberge la Cannebière</h3>
+                  <p>Nuit à partir de <strong>25€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                    alt="Hôtel du port"
+                  />
+                  <h3>Hôtel du port</h3>
+                  <p>Nuit à partir de <strong>52€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                    alt="Hôtel les mouettes"
+                  />
+                  <h3>Hôtel les mouettes</h3>
+                  <p>Nuit à partir de <strong>76€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                    alt="Hôtel de la mer"
+                  />
+                  <h3>Hôtel de la mer</h3>
+                  <p>Nuit à partir de <strong>46€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                    alt="Auberge le Panier"
+                  />
+                  <h3>Auberge le Panier</h3>
+                  <p>Nuit à partir de <strong>23€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <img
+                    class="img"
+                    src="/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                    alt="Hôtel Chez Amina"
+                  />
+                  <h3>Hôtel Chez Amina</h3>
+                  <p>Nuit à partir de <strong>96€</strong></p></a
+                >
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <h3 id="afficher-plus">Afficher plus</h3>
             </div>
+          </div>
+<!-- Popular Section Results -->
+          <div class="pop">
+            <div class="pop-title">
+              <h1>Les plus populaires</h1>
+              <i class="fas fa-chart-line"></i>
             </div>
-    <!-- Filters Section -->
-        <section>
-            <div class="filters">
-                <i class="fas fa-donate"></i>
-                <i class="fas fa-child"></i>
-                <i class="fas fa-dog"></i>
-                <i class="fas fa-heart"></i>
-
+            <div class="pop-cards">
+              <div class="pop-card">
+                <a href="#">
+                  <img
+                    class="pop-card-img"
+                    src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                    alt="Hôtel Le Soleil Du Matin"
+                  />
+                  <div class="pop-card-text">
+                    <h3>Hôtel Le Soleil Du Matin</h3>
+                    <p>Nuit à partir de <strong>128€</strong></p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="pop-card">
+                <a href="#">
+                  <img
+                    class="pop-card-img"
+                    src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                    alt="Hôtel Le Soleil Du Matin"
+                  />
+                  <div class="pop-card-text">
+                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                    <p>Nuit à partir de <strong>71€</strong></p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-        </section>
-        </section>
-        <section class="results">
-            <article class="results-main"></article>
-            <aside class="results-populars"></aside>
-        </section>
-        <section class="activities">
-            <article class="activities-results">
-
-            </article>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-<footer class="footer">
-
-</footer>
-    
-</body>
+    <footer class="footer"></footer>
+    <script>
+      const btn = document.querySelector(".btn");
+      const btn2 = document.querySelector(".btn2");
+      const eco = document.querySelector("#eco");
+      btn.addEventListener("click", (e) => {
+        console.log("btn clicked");
+      });
+      btn2.addEventListener("click", (e) => {
+        console.log("btn2 clicked");
+      });
+      eco.addEventListener("click", (e) => {
+        console.log("Eco clicked");
+      });
+    </script>
+  </body>
 </html>

@@ -1,19 +1,26 @@
+/* Variables */
+
 :root {
  --blue:  #0065FC;
  --primary: black;
  --light:  #DEEBFF;
- --bg-section: #c4bcbc;
+ --bg-section: #f2f2f2;
  --bg: white;
+
+/* Generic */
+
 }
 body {
     font-family: 'Raleway',sans-serif ;
     background-color: var(--bg);
-    color: var(--black);
+    color: var(--primary);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 /* Header */
+
 header {
   display:grid;
   grid-template-columns: auto 1fr auto auto;
@@ -52,55 +59,9 @@ header {
 .heb:hover, .act:hover {
     border-top: solid 3px var(--blue);
 }
-/* Media Query Header */
-@media screen and (max-width: 532px){
-	header {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-template-areas:
-            "logo reg"
-			" heb act";
-		margin: 1rem 0 0 0;
-    }
-    .heb:hover, .act:hover {
-        border-bottom: solid 3px var(--blue);
-        border-top: none;    
-    }
-    .heb, .act {
-        text-align: center; 
-    }
-    .reg {
-        text-align: right;
-    }
-    .logo {
-        margin-left: 1rem;
-    }
-    .searchBar .btn {
-        display: none;
-    }
-    .searchBar .btn2 {
-        height: 100%;
-        background-color: var(--blue);
-        padding: 1rem;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 0 20px 20px 0;
-        cursor: pointer;
-    } 
-    .filters {
-        flex-wrap: wrap;
-        border: 2px dashed tomato;
-    } 
-    .filters h3 {
-        width: 100%;
-    }
-    .filter {
-        margin: .3rem;
-    }
-}	
+
 /* Search Section */
+
 .search {
     margin-left: 1.9rem;
    /* display: inline-block; */
@@ -122,9 +83,9 @@ header {
 }
 .btn {
         height: 100%;
-        background-color: var(--blue);
+        background-color: var(--bg);
         padding: 1rem;
-        color: white;
+        color: var(--bg);
         font-size: 1rem;
         font-weight: bold;
         border: none;
@@ -139,7 +100,9 @@ header {
     background-color: transparent;
     border: none;
 }
+
 /* Filters Section */
+
 .filters {
     margin: 2rem 1rem 1rem 1rem;
     display: flex;
@@ -179,7 +142,9 @@ header {
 .filter label,i {
     cursor: pointer;
 }
+
 /* Results Section */
+
 .results {
     border: 2px dashed burlywood;
     display: flex;
@@ -205,9 +170,9 @@ header {
     grid-row-gap: 1rem;
 }
 .card {
-    background-color: white;
+    background-color: var(--bg);
     border-radius: 18px;
-    border: 3px solid white;
+    border: 3px solid var(--bg);
     box-shadow: 3px 4px 6px rgba(0,0,0,.5);
     width: 20rem;
     margin: 0 2rem 1rem 2rem;
@@ -228,7 +193,9 @@ header {
 .card h3, p {
     color: var(--primary);
 }
+
 /* Pop Results Section */ 
+
 .pop-title {
     display: flex;
     align-items: center;
@@ -267,6 +234,138 @@ text-decoration: none;
 .stars i {
     color: var(--blue);
 }
+
+/* Activities Section */
+
+#activities{
+    clear: both;
+	height: 100%;
+    padding: 0 3rem;
+	margin: 3rem 0;
+}
+#activities img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1.3rem;
+}
+#activities a:hover {
+    transform: rotate(-6deg);
+}
+.activitiesWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 5rem);
+    grid-gap: 2rem;
+	grid-template-areas: 
+	"lvp fdp pndc nddlg"
+	"lvp fdp pndc nddlg"
+	"lvp fdp pndc pl"
+	"lvp idf pndc pl"
+	"lvp idf pndc pl";
+}
+
+.lvp, .fdp, .idf, .pndc, .nddlg, .pl {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+    background-color: var(--bg);
+    box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+    border-radius: 1.3rem;
+}
+
+.lvp{
+	grid-area: lvp;
+}
+
+.fdp{
+	grid-area: fdp;
+}
+
+.pndc{
+	grid-area: pndc;
+}
+
+.nddlg{
+	grid-area: nddlg;
+}
+
+.idf{
+	grid-area: idf;
+}
+
+.pl{
+	grid-area: pl;
+}
+.activitiesWrapper div{
+	width: 100%;
+	height: 100%;
+    background-color: white;
+	border-radius: 1.3rem;
+}
+.activitiesWrapper h3 {
+	position: absolute;
+	bottom: 0;
+    color: var(--primary);
+	width: 100%;
+	background-color: white;
+	border-radius: 0 0 1.3rem 1.3rem;
+	padding: 20px;
+	margin: 0;
+}
+
+
+
+/* Media Query Header */
+
+@media screen and (max-width: 532px){
+	header {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+            "logo reg"
+			" heb act";
+		margin: 1rem 0 0 0;
+    }
+    .heb:hover, .act:hover {
+        border-bottom: solid 3px var(--blue);
+        border-top: none;    
+    }
+    .heb, .act {
+        text-align: center; 
+    }
+    .reg {
+        text-align: right;
+    }
+    .logo {
+        margin-left: 1rem;
+    }
+    .searchBar .btn {
+        display: none;
+    }
+    .searchBar .btn2 {
+        height: 100%;
+        background-color: var(--blue);
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+    } 
+    .filters {
+        flex-wrap: wrap;
+    } 
+    .filters h3 {
+        width: 100%;
+    }
+    .filter {
+        margin: .3rem;
+    }
+}	
+
+
 
 
 

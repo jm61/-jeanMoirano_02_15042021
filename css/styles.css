@@ -229,42 +229,44 @@ header {
     color: var(--primary);
 }
 /* Pop Results Section */ 
-.pop {
-    width: 33%;
-}
 .pop-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 0 1.5rem 0 1.5rem;
+    color: var(--primary);
+    justify-content: space-between;
 }
-.pop-cards {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-
+.pop-cards  {
+    margin: 0 2rem 0 2rem;
+    height: fit-content;
 }
 .pop-card {
-    border: 2px dashed green;
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color:white;
     border-radius: 1.5rem;
-    border: 5px solid white;
+    border: 3px solid white;
     box-shadow: 3px 4px 6px rgba(0,0,0,.5);
 	margin-bottom: 2rem;
-	font-size: 0.85rem;
-	height: 145px;
+	height: 15rem;
+    width: 100%;
 }
-.pop-card-img {
-    width: 40%;
-    height: 135px;
-    object-fit: cover;
+.pop-card img {
+    width: 30%;
+    height: 100%;
     border-radius: 1.2rem 0 0 1.2rem ;
 }
 .pop-card-text {
     color: var(--primary);
+    width: 50%;
+    margin-left: 1rem;
 }
+.pop a {
+text-decoration: none;
+}
+.stars i {
+    color: var(--blue);
+}
+
 
 

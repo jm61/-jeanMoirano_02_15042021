@@ -318,20 +318,35 @@
 
 </section>
     </main>
-    <footer class="footer"></footer>
-    <script>
-      const btn = document.querySelector(".btn");
-      const btn2 = document.querySelector(".btn2");
-      const eco = document.querySelector("#eco");
-      btn.addEventListener("click", (e) => {
-        console.log("btn clicked");
-      });
-      btn2.addEventListener("click", (e) => {
-        console.log("btn2 clicked");
-      });
-      eco.addEventListener("click", (e) => {
-        console.log("Eco clicked");
-      });
-    </script>
+<!-- Footer  -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="column">
+					<h2>A propos</h2>
+					<ul>
+						<li><a href="#">Fonctionnement du site</a></li>
+						<li><a href="#">Conditions générales de vente</a></li>
+						<li><a href="#">Données et confidentialité</a></li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h2>Nos hébergements</h2>
+					<ul>
+						<li><a href="#">Charte qualité</a></li>
+						<li><a href="#">Soumettre votre hôtel</a></li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h2>Assistance</h2>
+					<ul>
+						<li><a href="#">Centre d'aide</a></li>
+						<li><a href="#">Nous contacter</a></li>
+					</ul>
+				</div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

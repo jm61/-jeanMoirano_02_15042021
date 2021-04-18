@@ -6,10 +6,10 @@
  --light:  #DEEBFF;
  --bg-section: #f2f2f2;
  --bg: white;
+}
 
 /* Generic */
 
-}
 body {
     font-family: 'Raleway',sans-serif ;
     background-color: var(--bg);
@@ -17,6 +17,10 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
 }
 
 /* Header */
@@ -71,7 +75,7 @@ header {
 }
 .searchBar input {
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .search .title {
     margin-top: 1.5rem;
@@ -83,7 +87,7 @@ header {
 }
 .btn {
         height: 100%;
-        background-color: var(--bg);
+        background-color: var(--blue);
         padding: 1rem;
         color: var(--bg);
         font-size: 1rem;
@@ -146,7 +150,6 @@ header {
 /* Results Section */
 
 .results {
-    border: 2px dashed burlywood;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -210,9 +213,9 @@ header {
 .pop-card {
     display: flex;
     flex-direction: row;
-    background-color:white;
+    background-color: var(--bg);
     border-radius: 1.5rem;
-    border: 3px solid white;
+    border: 3px solid var(--bg);
     box-shadow: 3px 4px 6px rgba(0,0,0,.5);
 	margin-bottom: 2rem;
 	height: 15rem;
@@ -314,7 +317,33 @@ text-decoration: none;
 	margin: 0;
 }
 
+/* Footer */
 
+footer {
+    color: var(--primary);
+    max-width: 100%;
+}
+.wrapper {
+    background-color: var(--bg-section);
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+.column {
+	width: 30%;
+	padding-right: 3rem;
+}
+.column ul{
+    list-style: none;
+    padding-left: 0;
+}
+.column li{
+    line-height: 1.9;
+    text-decoration: none;
+}
+.column a:hover {
+    color: var(--blue);
+}
 
 /* Media Query Header */
 
@@ -327,11 +356,12 @@ text-decoration: none;
 			" heb act";
 		margin: 1rem 0 0 0;
     }
+    
     .heb:hover, .act:hover {
         border-bottom: solid 3px var(--blue);
         border-top: none;    
     }
-    .heb, .act {
+    .heb, .act {    
         text-align: center; 
     }
     .reg {
@@ -343,8 +373,11 @@ text-decoration: none;
     .searchBar .btn {
         display: none;
     }
+    .searchBar {
+        font-size: .7rem;
+    }
     .searchBar .btn2 {
-        height: 100%;
+        height: 90%;
         background-color: var(--blue);
         padding: 1rem;
         color: white;
@@ -363,9 +396,5 @@ text-decoration: none;
     .filter {
         margin: .3rem;
     }
-}	
-
-
-
-
-
+}
+	

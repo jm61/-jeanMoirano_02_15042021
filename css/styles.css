@@ -145,13 +145,16 @@ header {
 .filter label,i {
     cursor: pointer;
 }
+.filter:hover {
+    transform: scale(.9);
+}
 
 /* Results Section */
 
 .results {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 .acc, .pop {
     background-color: var(--bg-section);
@@ -176,7 +179,7 @@ header {
     border-radius: 18px;
     border: 3px solid var(--bg);
     box-shadow: 3px 4px 6px rgba(0,0,0,.5);
-    width: 20rem;
+    width: auto;
     margin: 0 2rem 1rem 2rem;
 }
 .card .img {
@@ -184,6 +187,9 @@ header {
     height: 7rem;
     object-fit: cover;
     border-radius: 18px 18px 0 0;
+}
+.card img:hover {
+    filter: sepia();
 }
 .card i {
     color: var(--blue);
@@ -225,6 +231,9 @@ header {
     width: 30%;
     height: 100%;
     border-radius: 1.2rem 0 0 1.2rem ;
+}
+.pop-card img:hover {
+    filter: sepia();
 }
 .pop-card-text {
     color: var(--primary);
@@ -348,9 +357,9 @@ footer {
     color: var(--blue);
 }
 
-/* Media Query Header */
+/* Media Query Mobile */
 
-@media screen and (max-width: 532px){
+@media screen and (max-width: 449px){
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -398,6 +407,83 @@ footer {
     }
     .filter {
         margin: .3rem;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-column-gap: 0rem;
+        grid-row-gap: 1rem;
+    }
+    .results {
+        flex-direction: column;
+    }
+    .activitiesWrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 12.5rem);
+        grid-template-areas: 
+	"lvp"
+	"fdp"
+	"pndc"
+	"nddlg"
+	"idf"
+    "pl";
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Media Query Tablet */
+
+@media screen and (max-width: 768px){
+    .filters {
+        font-size: .9rem;
+        max-width: 100%;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .results {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 70%;
+        margin-right: .5rem;
+    }
+    .activitiesWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 12rem);
+        grid-template-areas: 
+	"lvp fdp"
+	"pndc nddlg"
+	"idf pl";
+    }
+}
+/* Media Query Desktop */
+
+@media screen and (max-width: 1200px){
+    .filters {
+        font-size: .9rem;
+        max-width: 100%;
+    }
+    .results {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 70%;
+        margin-right: .5rem;
+    }
+    .activitiesWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 12rem);
+        grid-template-areas: 
+	"lvp fdp"
+	"pndc nddlg"
+	"idf pl";
     }
 }
 	

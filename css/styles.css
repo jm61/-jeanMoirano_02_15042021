@@ -133,6 +133,7 @@ header {
 }
 .info-results p {
     font-weight: bold;
+    text-align: left;
 }
 .filter input {
     display: none;
@@ -228,8 +229,7 @@ header {
     width: 100%;
 }
 .pop-card img {
-    width: 30%;
-    height: 100%;
+    max-width: 30%;
     border-radius: 1.2rem 0 0 1.2rem ;
 }
 .pop-card img:hover {
@@ -357,9 +357,64 @@ footer {
     color: var(--blue);
 }
 
+/* Media Query Desktop */
+
+@media screen and (max-width: 1200px){
+    .filters {
+        font-size: .9rem;
+        max-width: 100%;
+    }
+    .results {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 70%;
+        margin-right: .5rem;
+    }
+    .activitiesWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 12rem);
+        grid-template-areas: 
+	"lvp fdp"
+	"pndc nddlg"
+	"idf pl";
+    }
+}
+
+/* Media Query Tablet */
+
+@media screen and (max-width: 768px){
+    .filters {
+        font-size: .9rem;
+        max-width: 100%;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .results {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 70%;
+        margin-right: .5rem;
+    }
+    .activitiesWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 12rem);
+        grid-template-areas: 
+	"lvp fdp"
+	"pndc nddlg"
+	"idf pl";
+    }
+}
+
+
 /* Media Query Mobile */
 
-@media screen and (max-width: 449px){
+@media screen and (max-width: 449px) {
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -398,7 +453,7 @@ footer {
         border: none;
         border-radius: 0 20px 20px 0;
         cursor: pointer;
-    } 
+    }
     .filters {
         flex-wrap: wrap;
     } 
@@ -408,7 +463,11 @@ footer {
     .filter {
         margin: .3rem;
     }
-    .cards {
+    .info-results {
+        font-weight: normal;
+        margin-right: .5rem;
+    }
+    .results .cards {
         display: grid;
         grid-template-columns: 1fr ;
         grid-column-gap: 0rem;
@@ -417,9 +476,12 @@ footer {
     .results {
         flex-direction: column;
     }
-    .activitiesWrapper{
+    .pop-card {
+        height: 100%;
+    }
+    .activitiesWrapper {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 12.5rem);
         grid-template-areas: 
 	"lvp"
@@ -434,56 +496,6 @@ footer {
     }
 }
 
-/* Media Query Tablet */
 
-@media screen and (max-width: 768px){
-    .filters {
-        font-size: .9rem;
-        max-width: 100%;
-    }
-    .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-    }
-    .results {
-        flex-direction: column;
-    }
-    .card {
-        max-width: 70%;
-        margin-right: .5rem;
-    }
-    .activitiesWrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 12rem);
-        grid-template-areas: 
-	"lvp fdp"
-	"pndc nddlg"
-	"idf pl";
-    }
-}
-/* Media Query Desktop */
 
-@media screen and (max-width: 1200px){
-    .filters {
-        font-size: .9rem;
-        max-width: 100%;
-    }
-    .results {
-        flex-direction: column;
-    }
-    .card {
-        max-width: 70%;
-        margin-right: .5rem;
-    }
-    .activitiesWrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 12rem);
-        grid-template-areas: 
-	"lvp fdp"
-	"pndc nddlg"
-	"idf pl";
-    }
-}
 	

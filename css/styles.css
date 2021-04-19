@@ -19,7 +19,6 @@ body {
     padding: 0;
 }
 a {
-    color: var(--primary);
     text-decoration: none;
 }
 
@@ -190,8 +189,9 @@ header {
     color: var(--blue);
     margin-bottom: .5rem;
 }
-.card a {
-    text-decoration: none;
+
+.card a:hover {
+    color: yellow;
 }
 .card h3, p {
     color: var(--primary);
@@ -340,6 +340,9 @@ footer {
 .column li{
     line-height: 1.9;
     text-decoration: none;
+}
+.column a {
+    color: var(--primary);
 }
 .column a:hover {
     color: var(--blue);

@@ -67,7 +67,6 @@ header {
 
 .search {
     margin-left: 1.9rem;
-   /* display: inline-block; */
 }
 .searchBar {
     display: inline-flex;
@@ -250,7 +249,6 @@ text-decoration: none;
 /* Activities Section */
 
 #activities{
-    clear: both;
 	height: 100%;
     padding: 0 3rem;
 	margin: 3rem 0;

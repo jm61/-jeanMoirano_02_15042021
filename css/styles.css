@@ -33,24 +33,28 @@ header {
 .logo {
     grid-area: logo;
 }
-.heb {
+.title {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.subtitle {
+    margin-top: .3em;
+}
+.hébergements {
     grid-area: heb;
     text-decoration: none;
     margin: 0rem 1rem 0 1rem;
     color: var(--blue);
-    font-weight: bold;
     padding-top: 1.5rem;
 }
-.act {
+.activités {
     grid-area: act;
     text-decoration: none;
     margin: 0rem 1rem 0 1rem;
-
     color: var(--blue);
-    font-weight: bold;
     padding-top: 1.5rem;
 }
-.reg {
+.register {
     grid-area: reg;
     text-decoration: none;
     margin: 0rem 1rem 0 1rem;
@@ -59,8 +63,14 @@ header {
     font-weight: bold;
     padding-top: 1.5rem;
 }
-.heb:hover, .act:hover {
+.hébergements:hover, .activités:hover {
     border-top: solid 3px var(--blue);
+}
+input {
+    font-weight: bold;
+}
+.active {
+    color: var(--primary);
 }
 
 /* Search Section */
@@ -70,6 +80,8 @@ header {
 }
 .searchBar {
     display: inline-flex;
+    border: 1px solid var(--light);
+    border-radius: 20px;
 }
 .searchBar input {
     border: none;
@@ -79,9 +91,9 @@ header {
     margin-top: 1.5rem;
 }
 #map-marker {
-    padding: 1rem;
-    border-radius: 50% 0 0 50%;
-    background-color: var(--light);
+    padding: 1em; 
+    border-radius: 20px 0 0 20px;
+    background-color: var(--bg-section);
 }
 .btn {
         height: 100%;
@@ -106,9 +118,10 @@ header {
 /* Filters Section */
 
 .filters {
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 2rem 1rem 1rem 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    font-weight: bold;
     align-items: center;
     max-width: 80%;
 }
@@ -131,7 +144,6 @@ header {
     margin-right: 1rem;
 }
 .info-results p {
-    font-weight: bold;
     text-align: left;
 }
 .filter input {
@@ -161,6 +173,12 @@ header {
     border-radius: 1.5rem;
     margin: 1.5rem;
 }
+.acc {
+    flex: 66%;
+}
+.pop {
+    flex: 33%;
+}
 .acc h1 {
     margin-left: 1.5rem;
 }
@@ -177,8 +195,8 @@ header {
 .card {
     background-color: var(--bg);
     border-radius: 18px;
-    border: 3px solid var(--bg);
-    box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+    border: 5px solid var(--bg);
+    box-shadow: 0px 5px 14px rgba(0,0,0,.2);
     width: auto;
     margin: 0 2rem 1rem 2rem;
 }
@@ -187,9 +205,6 @@ header {
     height: 7rem;
     object-fit: cover;
     border-radius: 18px 18px 0 0;
-}
-.card img:hover {
-    filter: sepia();
 }
 .card i {
     color: var(--blue);
@@ -214,36 +229,45 @@ header {
 }
 .pop-cards  {
     margin: 0 2rem 0 2rem;
-    height: fit-content;
+    height: 80%;
 }
 .pop-card {
     display: flex;
     flex-direction: row;
     background-color: var(--bg);
     border-radius: 1.5rem;
-    border: 3px solid var(--bg);
-    box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+    border: 5px solid var(--bg);
+    box-shadow: 0px 5px 14px rgba(0,0,0,.2);
 	margin-bottom: 2rem;
-	height: 15rem;
+	height: 12rem;
     width: 100%;
 }
 .pop-card img {
     max-width: 30%;
     border-radius: 1.2rem 0 0 1.2rem ;
 }
-.pop-card img:hover {
-    filter: sepia();
-}
 .pop-card-text {
     color: var(--primary);
-    width: 50%;
-    margin-left: 1rem;
+    width: 30ch;
+    margin: 1em 2em 1em 1em ;
+    display: flex;
+    flex-direction: column;
+}
+.pop-card p {
+    margin-top: 0;
 }
 .pop a {
 text-decoration: none;
 }
+.stars {
+    margin-top: auto;
+    margin-bottom: 0;
+}
 .stars i {
     color: var(--blue);
+}
+#star-grey {
+    color: var(--light)
 }
 
 /* Activities Section */
@@ -258,9 +282,6 @@ text-decoration: none;
 	width: 100%;
 	object-fit: cover;
 	border-radius: 1.3rem;
-}
-#activities a:hover {
-    transform: rotate(-6deg);
 }
 .activitiesWrapper{
     display: grid;
@@ -277,11 +298,12 @@ text-decoration: none;
 
 .lvp, .fdp, .idf, .pndc, .nddlg, .pl {
 	display: flex;
-	flex-direction: column;
+flex-direction: column;
 	position: relative;
     background-color: var(--bg);
-    box-shadow: 3px 4px 6px rgba(0,0,0,.5);
     border-radius: 1.3rem;
+    box-shadow: 0px 5px 14px rgba(0,0,0,.2);
+
 }
 
 .lvp{
@@ -412,7 +434,7 @@ footer {
 
 /* Media Query Mobile */
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 437px) {
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -421,49 +443,70 @@ footer {
 			" heb act";
 		margin: 1rem 0 0 0;
     }
-    
-    .heb:hover, .act:hover {
+    .hébergements, .activités {
+        border-bottom: solid 3px var(--bg-section);
+        margin: 0;
+        width: 100%;   
+    }
+    .hébergements:hover, .activités:hover {
         border-bottom: solid 3px var(--blue);
         border-top: none;    
     }
-    .heb, .act {    
+    .hébergements, .activités {    
         text-align: center; 
+        padding-bottom: 1em;
+        font-weight: 500;
     }
-    .reg {
+    .register {
         text-align: right;
     }
     .logo {
-        margin-left: 1rem;
+        margin-left: 1em;
     }
     .searchBar .btn {
         display: none;
     }
-    .searchBar {
-        font-size: .7rem;
+    #map-marker {
+        width: 1.5rem;
+        text-align: center;
     }
     .searchBar .btn2 {
-        height: 90%;
+        height: 100%;
         background-color: var(--blue);
         padding: 1rem;
         color: white;
         font-size: 1rem;
         font-weight: bold;
         border: none;
-        border-radius: 0 20px 20px 0;
+        border-radius: 16px;
         cursor: pointer;
     }
     .filters {
         flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 85%;
+        margin-left: 2em;
+
     } 
     .filters h3 {
-        width: 100%;
+        width: 90%;
+        margin-left: .5em;
     }
     .filter {
         margin: .3rem;
     }
+    .filter:nth-of-type(4) {
+        margin-right: auto;
+    }
+    .filter:nth-of-type(2) {
+        margin-left: 2em;
+    }
     .info-results {
         font-weight: normal;
-        margin-right: .5rem;
+    }
+    .fa-info {
+        font-size: .8rem;
+        margin-left: -1rem;
     }
     .results .cards {
         display: grid;
@@ -474,8 +517,35 @@ footer {
     .results {
         flex-direction: column;
     }
+    .acc {
+        order: 2;
+        background-color: var(--bg);
+    }
+    .pop {
+        order: 1;
+        border-radius: 0px;
+        flex: 100%;
+        margin: 0;
+    }
     .pop-card {
-        height: 100%;
+      height: 8em;
+    }
+    .pop-card-text {
+      margin-top: -1rem
+    }
+    .card {
+        max-width: 90%;
+        height: 12rem;
+    }
+    .card h3 {
+        margin: 0 0 0 .5rem;
+    }
+    .card p {
+        margin: 0 0 .5rem .5rem;
+    }
+    .fa-chart-line {
+        font-weight: 700;
+        font-size: 1.3rem;
     }
     .activitiesWrapper {
         display: grid;
@@ -491,7 +561,13 @@ footer {
     }
     .wrapper {
         flex-direction: column;
+        font-size: .9rem;
     }
+    .wrapper > div {
+        width: 60%;
+
+    }
+
 }
 
 

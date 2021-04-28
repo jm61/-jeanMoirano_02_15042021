@@ -66,9 +66,7 @@ header {
 .hébergements:hover, .activités:hover {
     border-top: solid 3px var(--blue);
 }
-input {
-    font-weight: bold;
-}
+
 .active {
     color: var(--primary);
 }
@@ -80,11 +78,15 @@ input {
 }
 .searchBar {
     display: inline-flex;
+    width: auto;
     border: 1px solid var(--light);
     border-radius: 20px;
+    flex-shrink: 1;
 }
 .searchBar input {
     border: none;
+    flex: auto;
+    font-weight: bold;
     font-size: 1rem;
 }
 .search .title {
@@ -435,7 +437,7 @@ footer {
 
 /* Media Query Mobile */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;

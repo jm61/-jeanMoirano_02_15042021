@@ -113,6 +113,7 @@ input {
     color: transparent;
     background-color: transparent;
     border: none;
+    display: none;
 }
 
 /* Filters Section */
@@ -434,7 +435,7 @@ footer {
 
 /* Media Query Mobile */
 
-@media screen and (max-width: 437px) {
+@media screen and (max-width: 400px) {
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -463,6 +464,13 @@ footer {
     .logo {
         margin-left: 1em;
     }
+    .searchBar {
+        width: auto;
+        margin-right: 2rem;
+    }
+    .searchBar input {
+        width: 75%;
+    }
     .searchBar .btn {
         display: none;
     }
@@ -471,6 +479,7 @@ footer {
         text-align: center;
     }
     .searchBar .btn2 {
+        margin-left: .9rem;
         height: 100%;
         background-color: var(--blue);
         padding: 1rem;
@@ -480,6 +489,7 @@ footer {
         border: none;
         border-radius: 16px;
         cursor: pointer;
+        display: inline;
     }
     .filters {
         flex-wrap: wrap;

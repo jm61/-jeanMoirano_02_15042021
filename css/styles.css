@@ -554,8 +554,12 @@ footer {
         margin-top: -.5rem;
     }
     .card {
-        max-width: 95%;
+        max-width: 100%;
         height: 12rem;
+        margin: 0 .5rem;
+    }
+    .acc h1 {
+        margin: .5rem 1rem 1rem 0;
     }
     .card h3 {
         margin: 0 0 0 .5rem;

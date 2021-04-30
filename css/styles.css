@@ -9,12 +9,13 @@
 }
 
 /* Generic */
-
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Raleway',sans-serif ;
     background-color: var(--bg);
     color: var(--primary);
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -38,14 +39,15 @@ header {
     margin-bottom: 0;
 }
 .subtitle {
-    margin-top: .3em;
+    margin-top: .3rem;
 }
 .hébergements {
     grid-area: heb;
     text-decoration: none;
     margin: 0rem 1rem 0 1rem;
     color: var(--blue);
-    padding-top: 1.5rem;
+    padding-top: 1.5em;
+    border-top: solid 3px transparent;
 }
 .activités {
     grid-area: act;
@@ -53,6 +55,7 @@ header {
     margin: 0rem 1rem 0 1rem;
     color: var(--blue);
     padding-top: 1.5rem;
+    border-top: solid 3px transparent;
 }
 .register {
     grid-area: reg;
@@ -121,12 +124,13 @@ header {
 /* Filters Section */
 
 .filters {
-    margin: 2rem 1rem 1rem 0;
+    margin: 2rem 1em 1em 1em;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content:space-around;
     font-weight: bold;
     align-items: center;
-    max-width: 80%;
+    max-width: 70%;
 }
 .filters .fas {
    color: var(--blue);
@@ -137,7 +141,7 @@ header {
 .info-results {
     display: flex;
     align-items: center;
-    padding-left: 3rem;
+    padding-left: 2rem;
 }
 .info-results .fas {
     color: var(--blue);
@@ -155,7 +159,7 @@ header {
 .filter {
 	border-radius: 1.5rem;
     padding-right: 1rem;
-    border: 3px solid var(--light);
+    border: 3px solid var(--bg-section);
 }
 .filter label,i {
     cursor: pointer;
@@ -168,8 +172,7 @@ header {
 
 .results {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 .acc, .pop {
     background-color: var(--bg-section);
@@ -192,7 +195,6 @@ header {
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-column-gap: 0rem;
     grid-row-gap: 1rem;
 }
 .card {
@@ -201,7 +203,7 @@ header {
     border: 5px solid var(--bg);
     box-shadow: 0px 5px 14px rgba(0,0,0,.2);
     width: auto;
-    margin: 0 2rem 1rem 2rem;
+    margin: 0 1.2rem 0 1.2rem;
 }
 .card .img {
     width: 100%;
@@ -232,7 +234,6 @@ header {
 }
 .pop-cards  {
     margin: 0 2rem 0 2rem;
-    height: 80%;
 }
 .pop-card {
     display: flex;
@@ -246,13 +247,14 @@ header {
     width: 100%;
 }
 .pop-card img {
-    max-width: 30%;
+    max-width: 40%;
     border-radius: 1.2rem 0 0 1.2rem ;
+    object-fit: none;
 }
 .pop-card-text {
     color: var(--primary);
     width: 30ch;
-    margin: 1em 2em 1em 1em ;
+    margin: 0 2em 1em 1em ;
     display: flex;
     flex-direction: column;
 }
@@ -301,7 +303,7 @@ text-decoration: none;
 
 .lvp, .fdp, .idf, .pndc, .nddlg, .pl {
 	display: flex;
-flex-direction: column;
+    flex-direction: column;
 	position: relative;
     background-color: var(--bg);
     border-radius: 1.3rem;
@@ -437,7 +439,7 @@ footer {
 
 /* Media Query Mobile */
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 409px) {
 	header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -448,6 +450,7 @@ footer {
     }
     .hébergements, .activités {
         border-bottom: solid 3px var(--bg-section);
+        border-top: none;    
         margin: 0;
         width: 100%;   
     }
@@ -540,10 +543,11 @@ footer {
         margin: 0;
     }
     .pop-card {
-      height: 8em;
+      height: 9em;
+      font-size: .9rem;
     }
     .pop-card-text {
-      margin-top: -1rem
+      margin-top: -1rem;
     }
     .card {
         max-width: 90%;
@@ -559,9 +563,12 @@ footer {
         font-weight: 700;
         font-size: 1.3rem;
     }
+    #activities {
+        padding: 0 2rem;
+    }
     .activitiesWrapper {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 12.5rem);
         grid-template-areas: 
 	"lvp"
@@ -573,13 +580,14 @@ footer {
     }
     .wrapper {
         flex-direction: column;
-        font-size: .9rem;
+        font-size: .90rem;
     }
     .wrapper > div {
         width: 60%;
-
     }
-
+    .column {
+        padding-right: 0;
+    }
 }
 
 

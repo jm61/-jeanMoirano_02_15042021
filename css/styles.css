@@ -542,14 +542,19 @@ footer {
         margin: 0;
     }
     .pop-card {
-      height: 9em;
-      font-size: .9rem;
+      height: 9rem;
+      font-size: .85rem;
+      margin: 1rem 0 1rem auto;
+      max-width: auto;
     }
     .pop-card-text {
-      margin-top: -1rem;
+      margin-top: 0rem;
+    }
+    .pop-card p {
+        margin-top: -.5rem;
     }
     .card {
-        max-width: 90%;
+        max-width: 95%;
         height: 12rem;
     }
     .card h3 {

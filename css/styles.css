@@ -271,7 +271,7 @@ text-decoration: none;
 .stars i {
     color: var(--blue);
 }
-#star-grey {
+.stars .star-grey {
     color: var(--light)
 }
 
